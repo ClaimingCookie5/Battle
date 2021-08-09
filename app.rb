@@ -1,17 +1,18 @@
-require 'sinatra/base'
-require 'sinatra/reloader'
+require 'sinatra'
+require 'sinatra/reloader' if development?
 
-class SinatraApp < Sinatra::Base
-  configure :development do
-    register Sinatra::Reloader
-  end
+get '/' do
+  "hello!"
+end
 
-  get '/' do
-    "hello!"
-  end
+get '/secret' do
+  "Makers Academy - July 2021"
+end
 
-  get '/secret' do
-    "Makers Academy - July 2021"
-  end
+get '/about' do
+  "Coding Bootcamp based in London, UK"
+end
 
+get '/contact' do
+  "Some Contact Info"
 end
