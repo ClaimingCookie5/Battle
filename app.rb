@@ -9,6 +9,10 @@ get '/secret' do
   "Makers Academy - July 2021"
 end
 
+get '/cat' do
+  erb(:index)
+end
+
 get '/about' do
   "Coding Bootcamp based in London, UK"
 end
